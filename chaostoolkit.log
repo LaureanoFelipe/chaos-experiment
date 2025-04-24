@@ -1,0 +1,126 @@
+[36m[2025-04-24 23:00:12 DEBUG] [__init__:101][39m ###############################################################################
+[36m[2025-04-24 23:00:12 DEBUG] [__init__:102][39m Running command 'init'
+[36m[2025-04-24 23:00:12 DEBUG] [__init__:106][39m Using settings file '/home/ubuntu/.chaostoolkit/settings.yaml'
+[36m[2025-04-24 23:01:59 DEBUG] [__init__:101][39m ###############################################################################
+[36m[2025-04-24 23:01:59 DEBUG] [__init__:102][39m Running command 'init'
+[36m[2025-04-24 23:01:59 DEBUG] [__init__:106][39m Using settings file '/home/ubuntu/.chaostoolkit/settings.yaml'
+[36m[2025-04-24 23:02:15 DEBUG] [__init__:101][39m ###############################################################################
+[36m[2025-04-24 23:02:15 DEBUG] [__init__:102][39m Running command 'init'
+[36m[2025-04-24 23:02:15 DEBUG] [__init__:106][39m Using settings file '/home/ubuntu/.chaostoolkit/settings.yaml'
+[36m[2025-04-24 23:02:15 DEBUG] [settings:31][39m The Chaos Toolkit settings file could not be found at '/home/ubuntu/.chaostoolkit/settings.yaml'.
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:101][39m ###############################################################################
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:102][39m Running command 'run'
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:106][39m Using settings file '/home/ubuntu/.chaostoolkit/settings.yaml'
+[36m[2025-04-24 23:06:07 DEBUG] [settings:31][39m The Chaos Toolkit settings file could not be found at '/home/ubuntu/.chaostoolkit/settings.yaml'.
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'loader'
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'loader'
+[36m[2025-04-24 23:06:07 DEBUG] [caching:24][39m Building activity cache...
+[36m[2025-04-24 23:06:07 DEBUG] [caching:35][39m Cached 4 activities
+[32m[2025-04-24 23:06:07 INFO] [experiment:59][39m Validating the experiment's syntax
+[36m[2025-04-24 23:06:07 DEBUG] [configuration:64][39m Loading configuration...
+[36m[2025-04-24 23:06:07 DEBUG] [secret:79][39m Loading secrets...
+[36m[2025-04-24 23:06:07 DEBUG] [secret:104][39m Done loading secrets
+[32m[2025-04-24 23:06:07 INFO] [experiment:112][39m Experiment looks valid
+[36m[2025-04-24 23:06:07 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2025-04-24 23:06:07 DEBUG] [run:224][39m Runtime strategies: hypothesis - default / rollbacks - default
+[36m[2025-04-24 23:06:07 DEBUG] [caching:24][39m Building activity cache...
+[36m[2025-04-24 23:06:07 DEBUG] [caching:35][39m Cached 4 activities
+[36m[2025-04-24 23:06:07 DEBUG] [configuration:64][39m Loading configuration...
+[36m[2025-04-24 23:06:07 DEBUG] [secret:79][39m Loading secrets...
+[36m[2025-04-24 23:06:07 DEBUG] [secret:104][39m Done loading secrets
+[36m[2025-04-24 23:06:07 DEBUG] [configuration:161][39m Loading dynamic configuration...
+[32m[2025-04-24 23:06:07 INFO] [run:440][39m Running experiment: Teste simples de falha no Redis
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:67][39m Initializing controls
+[32m[2025-04-24 23:06:07 INFO] [run:471][39m Steady-state strategy: default
+[32m[2025-04-24 23:06:07 INFO] [run:477][39m Rollbacks strategy: default
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'experiment'
+[36m[2025-04-24 23:06:07 DEBUG] [run:654][39m Running steady-state hypothesis before the method
+[32m[2025-04-24 23:06:07 INFO] [hypothesis:205][39m Steady state hypothesis: Aplicação está saudável
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'hypothesis'
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'activity'
+[32m[2025-04-24 23:06:07 INFO] [activity:232][39m Probe: verifica_servico_aplicacao
+[36m[2025-04-24 23:06:07 DEBUG] [activity:317][39m Activity failed
+    Traceback (most recent call last):
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+        sock = connection.create_connection(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+        raise err
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+        sock.connect(sa)
+    ConnectionRefusedError: [Errno 111] Connection refused
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+        response = self._make_request(
+                   ^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+        conn.request(
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connection.py", line 445, in request
+        self.endheaders()
+      File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+        self._send_output(message_body, encode_chunked=encode_chunked)
+      File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+        self.send(msg)
+      File "/usr/lib/python3.12/http/client.py", line 1035, in send
+        self.connect()
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connection.py", line 276, in connect
+        self.sock = self._new_conn()
+                    ^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+        raise NewConnectionError(
+    urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x743fa76a1370>: Failed to establish a new connection: [Errno 111] Connection refused
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+        resp = conn.urlopen(
+               ^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+        retries = retries.increment(
+                  ^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x743fa76a1370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/chaoslib/provider/http.py", line 51, in run_http_activity
+        r = s.get(
+            ^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+        return self.request("GET", url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+        raise ConnectionError(e, request=request)
+    requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x743fa76a1370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/chaoslib/activity.py", line 314, in run_activity
+        result = run_http_activity(activity, configuration, secrets)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/ubuntu/chaos-env/lib/python3.12/site-packages/chaoslib/provider/http.py", line 101, in run_http_activity
+        raise ActivityFailed(f"failed to connect to {url}: {str(cex)}")
+    chaoslib.exceptions.ActivityFailed: failed to connect to http://localhost:3000/health: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x743fa76a1370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[31m[2025-04-24 23:06:07 ERROR] [activity:268][39m   => failed: failed to connect to http://localhost:3000/health: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x743fa76a1370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'activity'
+[33m[2025-04-24 23:06:07 WARNING] [hypothesis:232][39m Probe terminated unexpectedly, so its tolerance could not be validated
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'hypothesis'
+[31m[2025-04-24 23:06:07 CRITICAL] [run:674][39m Steady state probe 'verifica_servico_aplicacao' is not in the given tolerance so failing this experiment
+[32m[2025-04-24 23:06:07 INFO] [run:598][39m Experiment ended with status: failed
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:472][39m No controls to apply on 'experiment'
+[36m[2025-04-24 23:06:07 DEBUG] [__init__:106][39m Cleaning up controls
+[36m[2025-04-24 23:06:07 DEBUG] [caching:42][39m Clearing activities cache
