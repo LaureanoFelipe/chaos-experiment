@@ -1,0 +1,7 @@
+A aplicação estava saudável antes do caos (/health)
+Chaos interrompeu o container Redis (docker stop redis)
+A aplicação levou tempo demais para responder (redis off)
+Redis voltou ao ar (docker start redis)
+Aplicação voltou a funcionar com o redis ligado sem necessidade de Rollback
+
+A falha no Redis causou a indisponibilidade temporária da aplicação no endpoint /health, ao restaurar o Redis, a aplicação voltou a responder.
